@@ -1,9 +1,7 @@
-name: app-build-action
-#推送Tag时触发
+name: app-build-action-tv-my
+# 改为手动触发（删除原有Tag触发逻辑，替换为workflow_dispatch）
 on:
-  push:
-    tags:
-      - "tv_*"
+  workflow_dispatch:
 jobs:
   build-tv:
     runs-on: macos-latest
